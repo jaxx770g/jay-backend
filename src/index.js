@@ -3,12 +3,23 @@ import mongoose from 'mongoose';
 import { DB_NAME } from './constants.js';
 
 import connectDB from './db/indeex.js';
-
+import express from 'express';
+import { app } from './app.js';
 
 dotenv.config({
     path:'./env'   //second method for database connection
 })
-connectDB ();
+connectDB ()
+.then(()=>{
+    app.listen(process.env.PORT || 3000,()=>{
+        console.log(`Server is running on port ${process.env.PORT}`);
+
+    })
+})
+.catch((error)=>{
+    console.log("Error connecting to MongoDB:", error);
+  // Exit the process with failure
+})
 
 
 
