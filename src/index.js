@@ -6,7 +6,7 @@ import connectDB from './db/indeex.js';
 
 
 dotenv.config({
-    path:'./env'
+    path:'./env'   //second method for database connection
 })
 connectDB ();
 
