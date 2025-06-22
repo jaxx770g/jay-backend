@@ -57,7 +57,7 @@ userSchema.pre("save",async(next)=>{
     next();
 
 })
-userSchemamethods.ispasswordcomapre=async(password)=>{
+userSchema.methods.ispasswordcomapre=async(password)=>{
     return await bcrypt.compare(password,this.password)
 
 } 
