@@ -1,8 +1,8 @@
 //second method of wrapper function using promise :
 
 const asynchandler=(requesthandler)=>{
-    (req,res,next)=>{
-        return Promise.resolve(requesthandler(req,res,next)).catch((err)=> next(err))
+  return (req,res,next)=>{
+       Promise.resolve(requesthandler(req,res,next)).catch((err)=> next(err))
     }
 }
 export {asynchandler};
