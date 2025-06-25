@@ -3,11 +3,11 @@ import mongoose from 'mongoose';
 import { DB_NAME } from './constants.js';
 
 import connectDB from './db/indeex.js';
-import express from 'express';
+ import express from 'express';
 import { app } from './app.js';
 
 dotenv.config({
-    path:'./env'   //second method for database connection
+    path:'./.env'   //second method for database connection
 })
 connectDB ()
 .then(()=>{

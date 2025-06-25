@@ -9,13 +9,13 @@ app.use(cors({
 
 
 /// pending some code in this file 
-app.use(express.json({limit: "16kb"}))
-app.use(express.urlencoded({extended: true, limit: "16kb"}))
+app.use(express.json({limit: "10MB"}))
+app.use(express.urlencoded({extended: true, limit: "10MB"}))
 app.use(express.static("public"))
 app.use(cookieParser())
 
 // ROUTES
-import  router from "./routes/user.routes.js"
+import  {router} from "./routes/user.routes.js"
 
 
 

@@ -1,4 +1,4 @@
-class ApiResponse{
+export class ApiResponse{
     constructor(statusCode, data, message='success' ) {
         this.statusCode = statusCode; // HTTP status code
         this.message = message; // Response message
